@@ -6,10 +6,8 @@ def get_region_all_orders_by_item_type(item):
     url = f"{BASE_URL_API}{item}"
     return requests.get(url)
 
-
-paused = False
 item = input("Enter Item Id: ")
-while True and not paused:
+while True:
     print("Getting item market data...")
     response = get_region_all_orders_by_item_type(item)
     if response.ok:
